@@ -1,7 +1,9 @@
 #test_2026-10-3
 DOMAIN-SUFFIX,daikuan.360.cn,REJECT
 DOMAIN-SUFFIX,xjietiao.com,REJECT
-DOMAIN-SUFFIX,fqnovelpic.com,REJECT
+#这条可能是图床域名
+#DOMAIN-SUFFIX,fqnovelpic.com,REJECT
+
 DOMAIN-SUFFIX,jinrong.360.cn, REJECT
 DOMAIN-SUFFIX,vas-lf-x.snssdk.com,REJECT
 DOMAIN-SUFFIX,v.smtcdns.com,REJECT
