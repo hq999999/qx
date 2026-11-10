@@ -32,7 +32,7 @@ DOMAIN-SUFFIX,track.toutiaoapi.com,REJECT
 DOMAIN-SUFFIX,mon.snssdk.com,REJECT
 DOMAIN-SUFFIX,i.snssdk.com,REJECT
 #2026-11-10=======
-DOMAIN-SUFFIX,frontier-aweme.snssdk.com,REJECT
+HOST,frontier-aweme.snssdk.com,REJECT
 
 # ======= 快手广告 SDK =======
 DOMAIN-SUFFIX,gdfp.kuaishou.com,REJECT
