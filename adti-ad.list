@@ -1,75 +1,134 @@
-#test_2026-10-3
-DOMAIN-SUFFIX,daikuan.360.cn,REJECT
-DOMAIN-SUFFIX,xjietiao.com,REJECT
-# = 这条可能是图床域名 =
-#DOMAIN-SUFFIX,fqnovelpic.com,REJECT
-# = 这条可能是图床域名 =
-DOMAIN-SUFFIX,jinrong.360.cn, REJECT
-DOMAIN-SUFFIX,vas-lf-x.snssdk.com,REJECT
-DOMAIN-SUFFIX,v.smtcdns.com,REJECT
-DOMAIN-KEYWORD,ad.qznovelvod.com,REJECT
-DOMAIN-KEYWORD,ad-sign.byteimg.com,REJECT
-DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
-# ======= 红果短剧自身广告/统计 =======
-DOMAIN-SUFFIX,ad.redfruitdrama.com,REJECT
-DOMAIN-SUFFIX,ads.redfruitdrama.com,REJECT
-DOMAIN-SUFFIX,adservice.redfruitdrama.com,REJECT
-DOMAIN-SUFFIX,video-ad.redfruitdrama.com,REJECT
-DOMAIN-SUFFIX,analytics.redfruitdrama.com,REJECT
-DOMAIN-SUFFIX,monitor.redfruitdrama.com,REJECT
-DOMAIN-SUFFIX,track.redfruitdrama.com,REJECT
-DOMAIN-SUFFIX,tracklog.redfruitdrama.com,REJECT
-DOMAIN-SUFFIX,log.redfruitdrama.com,REJECT
+# ============================================================
+# Quantumult X 分流规则 · 广告 / 追踪拦截
+# 优化版本：2026-11-21
+# 策略：广告 REJECT / 核心服务 DIRECT
+# ============================================================
 
-# ======= 穿山甲（字节）广告联盟 =======
-DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
-DOMAIN-SUFFIX,ad.toutiao.com,REJECT
-DOMAIN-SUFFIX,ad.bytedance.com,REJECT
-#DOMAIN-SUFFIX,zijieapi.com,REJECT
-DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao.com,REJECT
-DOMAIN-SUFFIX,log.snssdk.com,REJECT
-DOMAIN-SUFFIX,track.toutiaoapi.com,REJECT
-DOMAIN-SUFFIX,mon.snssdk.com,REJECT
-DOMAIN-SUFFIX,i.snssdk.com,REJECT
-#2026-11-10=======
+
+# ==================== 360 / 借贷 ====================
+
+HOST-SUFFIX,daikuan.360.cn,REJECT
+HOST-SUFFIX,jinrong.360.cn,REJECT
+HOST-SUFFIX,xjietiao.com,REJECT
+
+
+# ==================== 小说 / 视频广告 ====================
+
+HOST-SUFFIX,ad.qznovelvod.com,REJECT
+HOST-SUFFIX,ad-sign.byteimg.com,REJECT
+
+# 图片资源域名，暂不拦截
+# HOST-SUFFIX,fqnovelpic.com,REJECT
+
+
+# ==================== 红果短剧广告 / 统计 ====================
+
+HOST-SUFFIX,ad.redfruitdrama.com,REJECT
+HOST-SUFFIX,ads.redfruitdrama.com,REJECT
+HOST-SUFFIX,adservice.redfruitdrama.com,REJECT
+HOST-SUFFIX,video-ad.redfruitdrama.com,REJECT
+HOST-SUFFIX,analytics.redfruitdrama.com,REJECT
+HOST-SUFFIX,monitor.redfruitdrama.com,REJECT
+HOST-SUFFIX,track.redfruitdrama.com,REJECT
+HOST-SUFFIX,tracklog.redfruitdrama.com,REJECT
+HOST-SUFFIX,log.redfruitdrama.com,REJECT
+
+
+# ==================== 字节 / 穿山甲 / 今日头条 ====================
+
+HOST-SUFFIX,vas-lf-x.snssdk.com,REJECT
+HOST-SUFFIX,log.snssdk.com,REJECT
+HOST-SUFFIX,mon.snssdk.com,REJECT
+HOST-SUFFIX,i.snssdk.com,REJECT
 HOST,frontier-aweme.snssdk.com,REJECT
 
-# ======= 快手广告 SDK =======
-DOMAIN-SUFFIX,gdfp.kuaishou.com,REJECT
-DOMAIN-SUFFIX,log-sdk.gifshow.com,REJECT
-DOMAIN-SUFFIX,ad.partner.gifshow.com,REJECT
-DOMAIN-SUFFIX,api.e.kuaishou.com,REJECT
+HOST-SUFFIX,pglstatp-toutiao.com,REJECT
+HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
+HOST-SUFFIX,api-access.pangolin-sdk-toutiao.com,REJECT
 
-# ======= 优量汇（腾讯广告） =======
-DOMAIN-SUFFIX,ad.qq.com,REJECT
-DOMAIN-SUFFIX,adstats.tencentmusic.com,REJECT
-DOMAIN-SUFFIX,tracking.qq.com,REJECT
-DOMAIN-SUFFIX,sdkconfig.qq.com,REJECT
+HOST-SUFFIX,ad.toutiao.com,REJECT
+HOST-SUFFIX,ad.bytedance.com,REJECT
+HOST-SUFFIX,track.toutiaoapi.com,REJECT
 
-# ======= 百度广告 =======
-DOMAIN-SUFFIX,adx.baidu.com,REJECT
-DOMAIN-SUFFIX,mobads.baidu.com,REJECT
-DOMAIN-SUFFIX,wn.pos.baidu.com,REJECT
+HOST-SUFFIX,oceanengine.com,REJECT
+HOST-SUFFIX,ad.oceanengine.com,REJECT
 
-# ======= 第三方分析/埋点 =======
-DOMAIN-SUFFIX,umeng.com,REJECT
-DOMAIN-SUFFIX,umtrack.com,REJECT
-DOMAIN-SUFFIX,bugly.qq.com,REJECT
-DOMAIN-SUFFIX,app-measurement.com,REJECT
-DOMAIN-SUFFIX,doubleclick.net,REJECT
-DOMAIN-SUFFIX,googlesyndication.com,REJECT
-DOMAIN-SUFFIX,googleads.g.doubleclick.net,REJECT
 
-# ======= 备用通用广告源（若误伤请注释） =======
-DOMAIN-KEYWORD,adservice,REJECT
-DOMAIN-KEYWORD,adsdk,REJECT
-DOMAIN-KEYWORD,adtrack,REJECT
-DOMAIN-KEYWORD,log.,REJECT
-DOMAIN-KEYWORD,track,REJECT
+# ==================== 快手广告 SDK ====================
 
-# ======= 放行核心服务 =======
-DOMAIN-SUFFIX,redfruitdrama.com,DIRECT
-DOMAIN-SUFFIX,api.redfruitdrama.com,DIRECT
-DOMAIN-SUFFIX,res.redfruitdrama.com,DIRECT
-DOMAIN-SUFFIX,cdn.redfruitdrama.com,DIRECT
-DOMAIN-SUFFIX,play.redfruitdrama.com,DIRECT
+HOST-SUFFIX,gdfp.kuaishou.com,REJECT
+HOST-SUFFIX,log-sdk.gifshow.com,REJECT
+HOST-SUFFIX,ad.partner.gifshow.com,REJECT
+HOST-SUFFIX,api.e.kuaishou.com,REJECT
+HOST-SUFFIX,ad.kuaishou.com,REJECT
+HOST-SUFFIX,adweb.kuaishou.com,REJECT
+
+
+# ==================== 腾讯广告 / 广点通 ====================
+
+HOST-SUFFIX,ad.qq.com,REJECT
+HOST-SUFFIX,adstats.tencentmusic.com,REJECT
+HOST-SUFFIX,tracking.qq.com,REJECT
+HOST-SUFFIX,sdkconfig.qq.com,REJECT
+HOST-SUFFIX,e.qq.com,REJECT
+HOST-SUFFIX,gdt.qq.com,REJECT
+HOST-SUFFIX,adsmind.gdtimg.com,REJECT
+
+
+# ==================== 百度广告 / 百度联盟 ====================
+
+HOST-SUFFIX,adx.baidu.com,REJECT
+HOST-SUFFIX,mobads.baidu.com,REJECT
+HOST-SUFFIX,wn.pos.baidu.com,REJECT
+HOST-SUFFIX,cpro.baidu.com,REJECT
+HOST-SUFFIX,pos.baidu.com,REJECT
+
+
+# ==================== 阿里妈妈 / 友盟 ====================
+
+HOST-SUFFIX,umeng.com,REJECT
+HOST-SUFFIX,umtrack.com,REJECT
+HOST-SUFFIX,umeng.co,REJECT
+HOST-SUFFIX,umengcloud.com,REJECT
+
+HOST-SUFFIX,tanx.com,REJECT
+HOST-SUFFIX,alimama.com,REJECT
+HOST-SUFFIX,mmstat.com,REJECT
+
+
+# ==================== 第三方分析 / 埋点 ====================
+
+HOST-SUFFIX,bugly.qq.com,REJECT
+HOST-SUFFIX,app-measurement.com,REJECT
+
+
+# ==================== 海外广告网络 ====================
+
+HOST-SUFFIX,doubleclick.net,REJECT
+HOST-SUFFIX,googlesyndication.com,REJECT
+
+
+# ==================== CDN / 广告分发 ====================
+
+HOST-SUFFIX,v.smtcdns.com,REJECT
+
+
+# ==================== 通用广告关键词 ====================
+
+HOST-KEYWORD,adservice,REJECT
+HOST-KEYWORD,adsdk,REJECT
+HOST-KEYWORD,adtrack,REJECT
+
+
+# ==================== 红果短剧核心服务放行 ====================
+
+HOST-SUFFIX,api.redfruitdrama.com,DIRECT
+HOST-SUFFIX,res.redfruitdrama.com,DIRECT
+HOST-SUFFIX,cdn.redfruitdrama.com,DIRECT
+HOST-SUFFIX,play.redfruitdrama.com,DIRECT
+
+
+# ============================================================
+# END
+# ============================================================
